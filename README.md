@@ -1,5 +1,9 @@
 # How to Design an app for Android TV
-The current explanation is based on the Design Propopal written by me for Building [STEM DIVERSE TV](https://github.com/NitishGadangi/stem-diverse-android-tv) of [AnitaB .org](https://github.com/anitab-org)
+**The current explanation is based on the Design Propopal written by me for Building [STEM DIVERSE TV](https://github.com/NitishGadangi/stem-diverse-android-tv) of [AnitaB .org](https://github.com/anitab-org)**
+
+**Refer to the [Github Repo Files](https://github.com/NitishGadangi/Android-TV-Prototpe) to get Raw version of all the Design Templates used in this proposal**
+
+**All MockUps are Designed using [AdobeXD](https://www.adobe.com/in/products/xd.html)**
 
 # Building for Android TV
 TV celebrates content by making it front and center. Whether you’re looking for movies, games, or TV, it’s about finding and enjoying content with the least amount of friction.
@@ -215,7 +219,6 @@ API Reference:
 Refer [Leanback](https://developer.android.com/jetpack/androidx/releases/leanback), for a complete description about the library.
 
 ## Exoplayer
-
 Player Constitutes the major section of the app. Because, it is where the user will engage with or watch content. Users will spend most of their time in this immersive experience. It's better to have an inbuilt player instead of opening another app to play videos.
 
 [ExoPlayer](http://google.github.io/ExoPlayer/) is an open source project that is not part of the Android framework and is distributed separately from the Android SDK. ExoPlayer’s standard audio and video components are built on Android’s MediaCodec API, which was released in Android 4.1 (API level 16). Because ExoPlayer is a library, you can easily take advantage of new features as they become available by updating your app.
@@ -227,7 +230,6 @@ Here is small snippet which explains the initialisation procedure for Exoplayer
 [![](https://lh5.googleusercontent.com/1pIbE9-gMLbKmj0G_ZXFA7DfOf_pgs8nBZpMnZD2XQ3qzLAVeeOeX4SZ5Dvh12aIun_uSTnSuMDCQOAOeQCvUGVhkVWSHAsNH100wet96r0Ng-pv4fI8ecIkJHnSjz5zzlC-ZbnC)](https://carbon.now.sh/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-java&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Fira%20Code&fs=18px&lh=155%25&si=false&es=2x&wm=false&code=%252F%252FCreating%2520the%2520player%250ASimpleExoPlayer%2520player%2520%253D%2520new%2520SimpleExoPlayer.Builder(context).build()%253B%250A%252F%252F%2520Bind%2520the%2520player%2520to%2520the%2520view.%250AplayerView.setPlayer(player)%253B%250A%252F%252F%2520Produces%2520DataSource%2520instances%2520through%2520which%2520media%2520data%2520is%2520loaded.%250ADataSource.Factory%2520dataSourceFactory%2520%253D%2520new%2520DefaultDataSourceFactory(context%252C%250A%2520%2520%2520%2520Util.getUserAgent(context%252C%2520%2522yourApplicationName%2522))%253B%250A%252F%252F%2520This%2520is%2520the%2520MediaSource%2520representing%2520the%2520media%2520to%2520be%2520played.%250AMediaSource%2520videoSource%2520%253D%250A%2520%2520%2520%2520new%2520ProgressiveMediaSource.Factory(dataSourceFactory)%250A%2520%2520%2520%2520%2520%2520%2520%2520.createMediaSource(mp4VideoUri)%253B%250A%252F%252F%2520Prepare%2520the%2520player%2520with%2520the%2520source.%250Aplayer.prepare(videoSource)%253B)
 
 ## Supported Media formats
-
 In version 1 of the MVP, mostly we might be added content from the youtube directly. Basically embedding sources from youtube into the Exoplayer.
 
 Here is how we can extract the source link from youtube and play them in exoplayer.
@@ -246,7 +248,6 @@ However, in ExoPlayer every piece of media is represented by MediaSource. The Ex
     
 
 ## Glide
-
 Images form the major part of the App and hence we need to make sure loading images into Imageviews goes frictionless.
 
 [Glide](https://github.com/bumptech/glide) is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
@@ -254,7 +255,6 @@ Images form the major part of the App and hence we need to make sure loading ima
 [![](https://lh5.googleusercontent.com/RaKnnbehqTp0Dftv50G4HkUKTCieXXxaKvG_li7jc27qfjDvzf9dYmoMILbztkBgLu1MZ1d3WTMkWLHLPIEGoDxrXpPe-kltNNtY86BhPfrObjDjGDPXkL4cWe4bXtvtf0WmldVB)](https://carbon.now.sh/?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-java&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Fira%20Code&fs=18px&lh=155%25&si=false&es=2x&wm=false&code=Glide.with(myFragment).load(url).centerCrop()%250A%2520%2520.placeholder(R.drawable.loading_spinner)%250A%2520%2520%2520%2520.into(myImageView)%253B)
 
 ## Retrofit
-
 [Retrofit](https://square.github.io/retrofit/) is a REST Client library (Helper Library) used in Android and Java to create an HTTP request and also to process the HTTP response from a REST API.
 
 REST Client in our case is the Retrofit library that is used on the client side (Android) to make HTTP requests to the REST API.
@@ -270,7 +270,6 @@ Here is small snippet as proposed in the [Retrofit documentation](https://square
 RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences.
 
 ## Kotlin and MVVM
-
 Of course, Kotlin being the android-first language it's obvious that it will be beneficial for future sustainment of the project. Basically, less code, more robustness, better safety, and a strong community.
 
 As everyone knows about the perks of shifting towards Kotlin, I would like to stop the Kotlin discussion here and move towards dependency injection.
@@ -280,7 +279,6 @@ Coming to MVVM, MVVM combines the advantages of separation of concerns provided 
   
 
 ## Dependency Injection
-
 Usage of dependency injection frameworks gives you various benefits that improve the app performance and allowing the app features to stay decoupled, helps us in testing components individually. And there are several more advantages that make up my whole proposal if I continued explaining… Hence, Keeping the advantages aside let me explain which framework I am going to opt for.
 
 There are two major types of Dependency Injection frameworks available right now.
@@ -295,7 +293,6 @@ Out of Dagger and Koin, would prefer to go with Koin, and Koin has its own reaso
 **However, I am quite experienced in working with Dagger2 also. Hence it's ok for me to work on any of them. So we can discuss this further in the community bonding period and proceed further based on discussions.
 
 ### Why Koin
-
 Since Koin isn't a dependency injector but a service locator with a clever reified trick that you can use to manually perform dependency injection, the boilerplate will scale disproportionally.
 
 This below stats might give a small idea.
@@ -320,7 +317,6 @@ That summed with the problems that annotation processing brings, increasing comp
 I mean having to add one line per each class that I want to add to the service locator is way better than having to re-compile all the graphs every time I do a clean build…
 
 ## Testing
-
 Testing is the most important step of the development life cycle as it will help us to verify the functionality of all the features of the app. Here is a list of libraries which I will be using for testing.
 
 -   Functional tests with [Espresso](http://google.github.io/android-testing-support-library/docs/espresso)
@@ -331,7 +327,6 @@ Testing is the most important step of the development life cycle as it will help
     
 
 ## DevOps
-
 In order to make it dev-ops friendly firstly I would like to use a Trunk based approach during the development of the app.
 
 Here, We only have one main branch. Then, we would branch off master when doing any features and anything that gets merged into master should be ready to ship to users. The image given can explain it in a better way.
@@ -360,6 +355,8 @@ Since Fastlane allows plugins, there is no restriction on the capabilities.
   
 
 ## What about Amazon FireTV
-
 Most apps that work on Android will also work on Fire TV because Fire TV is built on Android. The only difference is with services — for Fire TV, you'll want to use Amazon services instead of Google services (see [How Fire TV Development Differs from Android TV Development](https://developer.amazon.com/docs/fire-tv/differences-from-android-tv-development.html)).
 Hence building an Android App based on Android 5.1 / Android 7.1 will work on FireOs5 / FireOs6 seamlessly.
+
+
+Ideated with ❤ by [Nitish Gadangi](https://nitishgadangi.github.io/)
