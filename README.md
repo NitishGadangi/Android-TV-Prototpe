@@ -5,6 +5,8 @@
 
 **All MockUps are Designed using [AdobeXD](https://www.adobe.com/in/products/xd.html)**
 
+![Header Image](https://github.com/NitishGadangi/Android-TV-Prototpe/blob/master/header.png?raw=true)
+
 # Building for Android TV
 TV celebrates content by making it front and center. Whether you’re looking for movies, games, or TV, it’s about finding and enjoying content with the least amount of friction.
 
