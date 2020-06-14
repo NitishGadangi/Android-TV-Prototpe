@@ -359,4 +359,5 @@ Most apps that work on Android will also work on Fire TV because Fire TV is buil
 Hence building an Android App based on Android 5.1 / Android 7.1 will work on FireOs5 / FireOs6 seamlessly.
 
 
-Ideated with ❤ by [Nitish Gadangi](https://nitishgadangi.github.io/)
+
+**Designed with ❤ by [Nitish Gadangi](https://nitishgadangi.github.io/)**
