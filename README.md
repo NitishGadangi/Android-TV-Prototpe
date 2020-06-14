@@ -359,5 +359,14 @@ Most apps that work on Android will also work on Fire TV because Fire TV is buil
 Hence building an Android App based on Android 5.1 / Android 7.1 will work on FireOs5 / FireOs6 seamlessly.
 
 
+## Whats Next
+Ultimately this is the basic approach and you must relate it to your requirements.
+
+I hope my explanation gives you a basic idea upon the various design guidelines that one must follow while building for TV.
+
+Thats the End for now.
+
+I will try to add more about the Backend in the upcomming days. Untill then Keep Exploring.
+
 
 **Designed with ❤ by [Nitish Gadangi](https://nitishgadangi.github.io/)**
