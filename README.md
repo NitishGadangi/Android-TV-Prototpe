@@ -1,7 +1,7 @@
 # How to Design an app for Android TV
 **The current explanation is based on the Design Propopal written by me for Building [STEM DIVERSE TV](https://github.com/NitishGadangi/stem-diverse-android-tv) of [AnitaB .org](https://github.com/anitab-org)**
 
-**Refer to the [Github Repo Files](https://github.com/NitishGadangi/Android-TV-Prototpe) to get Raw version of all the Design Templates used in this proposal**
+**Refer to [Github Repo Files](https://github.com/NitishGadangi/Android-TV-Prototpe) to get Raw version of all the Design Templates used in this proposal**
 
 **All MockUps are Designed using [AdobeXD](https://www.adobe.com/in/products/xd.html)**
 
